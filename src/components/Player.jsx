@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function Player({name, symbol}) {
+function Player({name, symbol, isActive}) {
     const [playerName, setPlayerName] = useState(name);
     const [isEditing, setIsEditing] = useState(false);
     
@@ -12,13 +12,13 @@ function Player({name, symbol}) {
         setIsEditing(prevIsEditing => !prevIsEditing);
     }
     return (
-        <li>
+        <li className={isActive ? 'active' : undefined}>
             <span className="player">
                 { isEditing 
                   ? 
-                    <input className="player-name" value={playerName} onChange={(e) => handleInputChange(e)}/>
+                    <input className="player-name" value={playerName} onChange={handleInputChange}/>
                   : 
-                    <span className="player-name">{name}</span>
+                    <span className="player-name">{playerName}</span>
                 }
                 <span className="player-symbol">{symbol}</span>
             </span>
