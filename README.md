@@ -11,7 +11,7 @@ This part of the course is focused on setting up the basic structure for a Tic-T
 - Basic HTML structure with `div` wrappers and CSS class/ID usage
 
 ### 🛠 Concepts Used:
-- `useState` (will be used in the next steps)
+- `useState`
 - Default props
 - Slots (`children`)
 - Basic component structure
